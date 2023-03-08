@@ -1,0 +1,9 @@
+FOR COMPILE:
+	lex lexer.l
+	(wait)
+	yacc -d gpp_interpreter.y
+	(wait)
+	gcc lex.yy.c y.tab.c -w
+	(wait)
+	./a.out
+	
